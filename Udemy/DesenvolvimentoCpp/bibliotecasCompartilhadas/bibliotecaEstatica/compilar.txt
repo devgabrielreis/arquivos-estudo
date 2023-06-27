@@ -1,0 +1,18 @@
+para compilar:
+> g++ -c calculadora.cpp
+> g++ -c audio.cpp
+> g++ -c display.cpp
+> g++ display.o calculadora.o audio.o -o calc
+
+tb é possivel criar uma biblioteca estatica:
+https://www.geeksforgeeks.org/static-vs-dynamic-libraries/
+> g++ -c calculadora.cpp
+> g++ -c audio.cpp
+> g++ -c display.cpp
+> ar rcs displayaudio.lib display.o audio.o
+> g++ calculadora.o displayaudio.lib -o calc
+
+para checar simbolos:
+> nm -C display.o
+tbm:
+> nm -C displayaudio.lib
