@@ -1,0 +1,5 @@
+   GET solicita a apresentacao de um recurso
+  POST envio de dados ao servidor
+   PUT atualizacao de dados
+DELETE remocao de dados
+ PATCH atualizacao de dado especifico

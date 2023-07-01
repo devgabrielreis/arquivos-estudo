@@ -1,0 +1,6 @@
+$_ENV variaveis de ambiente
+$_GET parametros que foram enviados por GET
+$_POST parametros que foram enviaddos por POST
+$_COOKIE valores de cookies
+$_SERVER informacoes sobre o servidor
+$_FILES informacoes sobres os arquivos que vieram por upload
