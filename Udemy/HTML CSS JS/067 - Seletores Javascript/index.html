@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript Selectors e CSS</title>
+        <style>
+            h1 {
+                width: 300px;
+                height: 50px;
+                margin: 15px auto;
+                display: block;
+                background-color: #f2f2f2;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                line-height: 50px;
+            }
+
+            .my-buttons {
+                width: 300px;
+                height: 80px;
+                margin: 15px auto;
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            .my-buttons > button {
+                height: 40px;
+                margin: auto;
+                flex-basis: 50%;
+            }
+        </style>
+    </head>
+    <body style="text-align: center; margin-top: 50px;">
+        <div class="my-buttons">
+            <button onclick="facaAzul()">Azuis</button>
+            <button onclick="facaVermelho()">Vermelhos</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+
+        <h1 class="item-azul">Azul 1</h1>
+        <h1 class="item-azul">Azul 2</h1>
+        <h1 class="item-azul">Azul 3</h1>
+        
+        <h1 class="item-vermelho">Vermelho 1</h1>
+        <h1 class="item-vermelho">Vermelho 2</h1>
+        <h1 class="item-vermelho">Vermelho 3</h1>
+
+        <script>
+            let azul = document.querySelectorAll(".item-azul");
+            let vermelho = document.getElementsByClassName("item-vermelho");
+
+            function facaAzul() {
+                for (let i = 0; i < azul.length; i++)
+                {
+                    azul[i].style.color = "#0000ff";
+                    azul[i].style.display = "block";
+                }
+
+                for (let i = 0; i < vermelho.length; i++)
+                {
+                    vermelho[i].style.display = "none";
+                }
+
+                document.body.style.backgroundColor = "#111188";
+            }
+
+            function facaVermelho() {
+                for (let i = 0; i < vermelho.length; i++)
+                {
+                    vermelho[i].style.color = "red";
+                    vermelho[i].style.display = "block";
+                }
+
+                for (let i = 0; i < azul.length; i++)
+                {
+                    azul[i].style.display = "none";
+                }
+
+                document.body.style.backgroundColor = "#881111";
+            }
+
+            function reset()
+            {
+                for (let i = 0; i < azul.length; i++)
+                {
+                    azul[i].style.color = "black";
+                    azul[i].style.display = "block";
+                }
+
+                for (let i = 0; i < vermelho.length; i++)
+                {
+                    vermelho[i].style.color = "black";
+                    vermelho[i].style.display = "block";
+                }
+
+                document.body.style.backgroundColor = "white";
+            }
+        </script>
+    </body>
+</html>

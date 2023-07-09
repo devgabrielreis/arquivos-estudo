@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Variáveis</title>
+    </head>
+    <body>
+        <script>
+            var nome;
+            let idade;
+            const altura = 1.83;
+
+            if(true)
+            {
+                var pais = "Brasil";
+                let estado = "SP"; /* nao vai existir fora desse escopo */
+
+                if(true)
+                {
+                    console.log("O estado é:", estado);
+                }
+            }
+
+            console.log(nome, idade, altura);
+            console.log(pais, estado);
+        </script>
+    </body>
+</html>

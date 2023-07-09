@@ -1,0 +1,73 @@
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f4f5;
+}
+
+.my-container {
+    display: flex;
+    width: 80%;
+    height: 600px;
+    margin: 60px auto;
+    background-color: #8a00cf;
+    border-radius: 8px;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow: row wrap; /* o primeiro valor é o flex-diretion e o segundo é o flex-wrap */
+    justify-content: space-between; /* ele justifica no eixo definido pela flex-direction */
+    align-items: flex-start; /* ele é baseado no valor oposto de flex-direction */
+    align-content: flex-end;
+}
+
+.my-item {
+    height: 150px;
+    background-color: #21f8bb;
+    border-radius: 8px;
+    padding: 30px;
+    border: 4px solid #fff;
+    flex-basis: 23%;
+}
+
+/* o valor padrão é order 0 */
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+.order-4 {
+    order: 4;
+}
+
+/* o valor padrão é 0 */
+.grow-1 {
+    flex-grow: 1;
+}
+
+.grow-2 {
+    flex-grow: 2;
+}
+
+/* flex-shrink diminui proporcionalmente os itens que estao dentro de um container
+quando a soma de suas larguras é maior que a largura do container, como um flex-grow
+reverso */
+
+/*
+.item {
+  flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
+*/
+
+.self-top {
+    align-self: flex-start;
+}
